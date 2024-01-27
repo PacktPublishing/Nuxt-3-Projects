@@ -2,7 +2,6 @@
   <div class="divider" />
 </template>
 
-style
 <style scoped>
 .divider {
   position: relative;
