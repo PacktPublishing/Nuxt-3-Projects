@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center text-slate-800">
+  <div class="text-center">
     <h2 class="text-4xl font-bold">
       {{ weatherData?.current.temp.toFixed(0) }}°
     </h2>

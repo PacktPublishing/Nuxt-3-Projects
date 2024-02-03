@@ -1,12 +1,10 @@
 <template>
-  <div class="bg-slate-100 min-h-screen">
+  <div class="bg-slate-100 dark:bg-slate-800 min-h-screen">
     <div class="container py-6">
       <u-card>
-        <h1 class="text-3xl font-bold text-center text-gray-700 mb-6">
-          Weather Sky
-        </h1>
+        <h1 class="text-3xl font-bold text-center mb-6">Weather Sky</h1>
 
-        <p class="text-center text-gray-600 mb-4">
+        <p class="text-center text-gray-500 mb-4">
           Search for current weather data by city
         </p>
 
@@ -17,14 +15,14 @@
         <empty-placeholder v-if="!weatherData && !loading" />
 
         <div v-if="loading" class="animate-pulse w-full space-y-4">
-          <div class="h-96 bg-slate-300 rounded" />
+          <div class="h-96 bg-slate-300 dark:bg-slate-900 rounded" />
 
-          <div class="h-96 bg-slate-300 rounded" />
+          <div class="h-96 bg-slate-300 dark:bg-slate-900 rounded" />
         </div>
 
         <template v-else-if="weatherData">
           <u-card>
-            <h1 class="text-3xl font-bold text-center text-gray-700 mb-6">
+            <h1 class="text-3xl font-bold text-center mb-6">
               {{ activeCity?.name }}, {{ activeCity?.country }}
             </h1>
 
@@ -44,7 +42,7 @@
 
             <!-- 7 Day Forecast -->
             <div class="p-4 rounded-lg">
-              <h3 class="font-semibold text-xl text-slate-700 text-center mb-4">
+              <h3 class="font-semibold text-xl text-center mb-4">
                 7 Day Forecast
               </h3>
 

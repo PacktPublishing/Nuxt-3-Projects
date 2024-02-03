@@ -7,7 +7,8 @@ export default defineAppConfig({
 
     card: {
       base: 'overflow-visible mb-6',
-      shadow: 'shadow-none'
+      shadow: 'shadow-none',
+      background: 'bg-white'
     }
   }
 })
