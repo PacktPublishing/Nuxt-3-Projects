@@ -4,13 +4,8 @@
     <section
       class="relative h-[60vh] flex items-center justify-center rounded-lg"
     >
-      <nuxt-img
-        :src="recipe.image"
-        alt="recipe Image"
-        class="absolute w-full h-full object-cover"
-        preset="optimized"
-        placeholder
-      />
+      <img :src="recipe.image" class="absolute w-full h-full object-cover" />
+
       <div class="absolute inset-0 bg-black opacity-50" />
     </section>
 
@@ -73,36 +68,4 @@ definePageMeta({
     return !!recipes.find(item => item.slug === route.params.slug)
   }
 })
-
-useSeoMeta({
-  description: recipe?.description,
-  ogDescription: recipe?.description
-})
-
-defineOgImageComponent('CustomTemplate', {
-  title: recipe?.title,
-  description: recipe?.description,
-  image: recipe?.image
-})
-
-useSchemaOrg([
-  defineRecipe({
-    name: recipe?.title,
-    description: recipe?.description,
-    image: recipe?.image,
-    cookTime: recipe?.cookingTime,
-    prepTime: recipe?.prepTime,
-    nutrition: recipe?.nutrition,
-    recipeYield: recipe?.recipeYield,
-    recipeCategory: recipe?.recipeCategory,
-    recipeCuisine: recipe?.recipeCuisine,
-
-    aggregateRating: {
-      ratingValue: recipe?.ratings
-    },
-
-    recipeIngredient: recipe?.recipeIngredient,
-    recipeInstructions: recipe?.recipeInstructions
-  })
-])
 </script>

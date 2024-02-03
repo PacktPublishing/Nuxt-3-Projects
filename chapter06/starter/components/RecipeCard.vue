@@ -3,15 +3,7 @@
     :to="`/recipe/${recipe.slug}`"
     class="rounded overflow-hidden shadow-xl"
   >
-    <nuxt-img
-      format="webp"
-      class="w-full object-cover h-[250px]"
-      height="250"
-      :src="recipe.image"
-      alt="Recipe Image"
-      placeholder
-    />
-
+    <img class="w-full object-cover h-[250px]" :src="recipe.image" />
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">{{ recipe.title }}</div>
 

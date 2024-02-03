@@ -26,9 +26,14 @@ export default defineNuxtConfig({
     sources: ['http://localhost:3000/api/__sitemap__/urls']
   },
 
-  app: {
-    head: {
-      meta: [{ name: 'theme-color', content: '#facc15' }]
+  image: {
+    presets: {
+      optimized: {
+        modifiers: {
+          format: 'webp',
+          placeholder: true
+        }
+      }
     }
   }
 })
