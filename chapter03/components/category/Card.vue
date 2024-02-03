@@ -23,8 +23,6 @@
 </template>
 
 <script setup lang="ts">
-import { Category } from '~/types/index'
-
 defineProps<{
   category: Category
 }>()

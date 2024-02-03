@@ -35,4 +35,4 @@ export default [
     description: 'Multi-floor homes with traditional charm.',
     image: '/images/categories/townhouses.jpeg'
   }
-]
+] as Category[]
