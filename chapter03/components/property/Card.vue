@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { Property } from '~/types'
+import type { Property } from '~/types'
 
 defineProps<{
   property: Property
