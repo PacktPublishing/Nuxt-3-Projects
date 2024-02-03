@@ -64,9 +64,6 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
-import { useWeatherStore } from '~/stores/weather'
-
 const weatherStore = useWeatherStore()
 const { activeCity, weatherData } = storeToRefs(weatherStore)
 

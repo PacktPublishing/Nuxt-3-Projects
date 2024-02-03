@@ -1,7 +1,7 @@
 export {}
 
 declare global {
-  interface CityData {
+  type CityData = {
     name: string
     lat: number
     lon: number
@@ -9,7 +9,7 @@ declare global {
     state: string
   }
 
-  interface WeatherDataResponse {
+  type WeatherDataResponse = {
     current: HourlyWeather
     hourly: Array<HourlyWeather>
     daily: Array<DailyWeather>
@@ -19,7 +19,7 @@ declare global {
     timezone_offset: number
   }
 
-  interface HourlyWeather {
+  type HourlyWeather = {
     dt: number
     temp: number
     feels_like: number
@@ -36,7 +36,7 @@ declare global {
     pop: number
   }
 
-  interface DailyWeather {
+  type DailyWeather = {
     dt: number
     temp: {
       day: number
@@ -45,7 +45,7 @@ declare global {
     weather: Array<Weather>
   }
 
-  interface Weather {
+  type Weather = {
     id: number
     main: string
     description: string

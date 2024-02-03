@@ -1,5 +1,3 @@
-import { defineStore } from 'pinia'
-
 export const useWeatherStore = defineStore('weather', () => {
   const activeCity = ref<CityData>()
   const weatherData = ref<WeatherDataResponse>()
@@ -8,6 +6,8 @@ export const useWeatherStore = defineStore('weather', () => {
   const apiKey = config.public.weatherApiKey
 
   const citiesLookup = async (query: string): Promise<CityData[]> => {
+    if (!query) return []
+
     const response: Array<CityData> = await $fetch(
       `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${apiKey}`
     )
