@@ -29,8 +29,6 @@ export const useQuizStore = defineStore('quiz', () => {
     if (currentQuestionIndex.value < quiz.value.length - 1)
       currentQuestionIndex.value++
     else quizFinished.value = true
-
-    console.log(quizFinished.value)
   }
 
   // Reset the quiz to its initial state.

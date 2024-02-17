@@ -9,13 +9,13 @@
         </h2>
 
         <h1 class="text-4xl font-mont font-bold capitalize">
-          <span>finished</span>
+          <span>Finished</span>
         </h1>
 
         <hr class="divider" />
 
         <div v-for="row in quizStore.result">
-          <h1 class="text-3xl text-center font-bold">{{ row.body }}</h1>
+          <h3 class="text-3xl text-center font-bold">{{ row.body }}</h3>
 
           <div class="text-2xl capitalize mt-4 grid gap-2">
             <div

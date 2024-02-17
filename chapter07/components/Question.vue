@@ -1,5 +1,5 @@
 <template>
-  <div v-if="currentQuestion" class="text-center">
+  <div class="text-center">
     <h1 class="text-4xl text-center capitalize font-bold mb-8">
       {{ currentQuestion.body }}
     </h1>
