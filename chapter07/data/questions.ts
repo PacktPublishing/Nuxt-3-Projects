@@ -1,4 +1,4 @@
-export const questions: Question[] = [
+export default [
   {
     id: 1,
     body: 'What is the capital of Russia?',
@@ -178,4 +178,4 @@ export const questions: Question[] = [
     ],
     rightAnswerId: 3
   }
-]
+] as Question[]
