@@ -42,6 +42,7 @@ export const useQuizStore = defineStore('quiz', () => {
   }
 
   return {
+    currentQuestionIndex,
     quizFinished,
     quiz,
     currentQuestion,
