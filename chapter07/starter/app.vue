@@ -57,7 +57,7 @@ const quizStore = useQuizStore()
 const { quizFinished } = storeToRefs(quizStore)
 </script>
 
-<style lang="scss">
+<style>
 .feedback {
   @apply text-center font-bold p-4 max-w-2xl w-full mx-auto rounded-lg;
 }
