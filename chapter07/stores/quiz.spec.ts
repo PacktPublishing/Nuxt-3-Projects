@@ -58,9 +58,6 @@ describe('Quiz Store', () => {
     expect(resultEntry).toBeDefined() // Ensures there is a result entry
     expect(resultEntry.userAnswer.id).toBe(rightAnswerId) // Checks if the correct answer ID is stored
     expect(resultEntry.answerIsRight).toBe(true) // Verifies the answer status is correct
-
-    // Optionally, test with a wrong answer by selecting any answer ID that's not the rightAnswerId
-    // and repeat the process to ensure the status is correctly marked as false
   })
 
   it('adds the answered question to the result array with an incorrect status when a wrong answer is selected', () => {
@@ -91,31 +88,28 @@ describe('Quiz Store', () => {
   it('transitions to the next question upon answering', () => {
     const quizStore = useQuizStore()
 
-    // Initial setup: Ensure there are questions and we are on the first question
-    expect(quizStore.quiz.length).toBeGreaterThan(1) // Ensure there's more than one question for the test
-    const initialIndex = quizStore.currentQuestionIndex
-    expect(initialIndex).toBe(0) // Ensure starting at the first question
+    expect(quizStore.currentQuestionIndex).toBe(0)
 
-    const firstQuestion = quizStore.quiz[initialIndex]
-    const anyAnswerId = firstQuestion.answers[0].id // Select any answer ID from the first question
-
-    // Answer the first question
+    const firstQuestion = quizStore.quiz[0]
+    // Select any answer ID from the first question
+    const anyAnswerId = firstQuestion.answers[0].id
     quizStore.updateProgress(anyAnswerId)
 
     // Verify the store has moved to the next question
-    expect(quizStore.currentQuestionIndex).toBe(initialIndex + 1) // Expect the index to have incremented by 1
+    expect(quizStore.currentQuestionIndex).toBe(1)
   })
 
   it('marks the quiz as finished when the last question is answered', () => {
     const quizStore = useQuizStore()
 
-    // Answer each question in the quiz to progress through all questions
+    // Answer each question
     for (let i = 0; i < quizStore.quiz.length; i++) {
       const question = quizStore.quiz[i]
-      quizStore.updateProgress(question.rightAnswerId) // Assuming using the right answer moves to the next question
+      quizStore.updateProgress(question.rightAnswerId)
     }
 
-    // After answering all questions, the quiz should be marked as finished
+    // After answering all questions,
+    // the quiz should be marked as finished
     expect(quizStore.quizFinished).toBe(true)
     expect(quizStore.result.length).toBe(5)
   })

@@ -1,7 +1,7 @@
 <template>
   <div class="bg-violet-950 min-h-screen text-white">
     <div class="container py-12 text-center">
-      <template v-if="quizFinished">
+      <template v-if="quizStore.quizFinished">
         <h2
           class="w-64 h-64 border-8 rounded-full mx-auto flex items-center justify-center mb-12"
         >
@@ -54,7 +54,6 @@
 
 <script setup>
 const quizStore = useQuizStore()
-const { quizFinished } = storeToRefs(quizStore)
 </script>
 
 <style>
