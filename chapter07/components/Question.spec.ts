@@ -13,10 +13,10 @@ const wrapper = mount(QuestionComponent, {
   }
 })
 
-const quizStore = useQuizStore()
-
 describe('Question Component', () => {
   it('renders current question and answers', () => {
+    const quizStore = useQuizStore()
+
     const question = quizStore.currentQuestion
     expect(wrapper.text()).toContain(question.body)
     expect(wrapper.findAll('button')).toHaveLength(4)
@@ -28,6 +28,8 @@ describe('Question Component', () => {
   })
 
   it('calls answered method with correct answerId when an answer is clicked', async () => {
+    const quizStore = useQuizStore()
+
     // clicking on the first button
     await wrapper.findAll('button')[0].trigger('click')
 

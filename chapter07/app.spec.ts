@@ -1,11 +1,11 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import questions from '~/data/questions'
 import { setup, createPage } from '@nuxt/test-utils/e2e'
 
 describe('E2E Testing for the Quiz Feature in App.vue', async () => {
   await setup()
 
-  test('Verifies the quiz initial state: one question headline and four answer buttons', async () => {
+  it('Verifies the quiz initial state: one question headline and four answer buttons', async () => {
     // Update the path according to your app's routing if necessary.
     const page = await createPage('/')
 
@@ -18,7 +18,7 @@ describe('E2E Testing for the Quiz Feature in App.vue', async () => {
     expect(buttonCount).toBe(4)
   })
 
-  test('Selects all correct answers to show the result page', async () => {
+  it('Selects all correct answers to show the result page', async () => {
     // get the homepage
     const page = await createPage('/')
 
