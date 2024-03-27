@@ -88,8 +88,8 @@ const onSubmit = async () => {
 
     if (error) throw error
 
-    if (!editMode.value) toast.add({ title: 'Post created Successfully' })
-    else toast.add({ title: 'Post created Successfully' })
+    if (!editMode.value) toast.add({ title: 'Post Created Successfully' })
+    else toast.add({ title: 'Post Updated Successfully' })
 
     navigateTo('/')
   } catch (error) {
