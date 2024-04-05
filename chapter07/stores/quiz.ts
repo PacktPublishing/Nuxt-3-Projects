@@ -1,10 +1,10 @@
 import questions from '~/data/questions'
 
 export const useQuizStore = defineStore('quiz', () => {
-  const currentQuestionIndex = ref(0)
-  const quizFinished = ref(false)
+  const currentQuestionIndex = ref<number>(0)
+  const quizFinished = ref<boolean>(false)
   const result = ref<Result[]>([])
-  const score = ref(0)
+  const score = ref<number>(0)
 
   const quiz = computed(() => selectRandomQuestions(questions, 5))
 
