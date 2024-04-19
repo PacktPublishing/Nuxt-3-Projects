@@ -1,19 +1,19 @@
 {
-	"name": "demo",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"build": "nuxt build",
-		"dev": "nuxt dev",
-		"generate": "nuxt generate",
-		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare"
-	},
-	"dependencies": {
-		"@nuxt/ui": "^2.15.0",
-		"nuxt": "^3.11.1",
-		"translation": "workspace:^",
-		"vue": "^3.4.21",
-		"vue-router": "^4.3.0"
-	}
+  "name": "demo-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^2.15.0",
+    "nuxt": "^3.11.1",
+    "translation": "workspace:^",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  }
 }

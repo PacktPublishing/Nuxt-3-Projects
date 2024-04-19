@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import {
   defineNuxtModule,
   addPlugin,
@@ -5,7 +6,6 @@ import {
   addImportsDir
 } from '@nuxt/kit'
 import type { Messages, ModuleOptions } from './types'
-import { readFileSync } from 'fs'
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {

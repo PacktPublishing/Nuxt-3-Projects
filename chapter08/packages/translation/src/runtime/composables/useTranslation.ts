@@ -1,4 +1,4 @@
-import { computed, useCookie } from '#imports'
+import { computed, useCookie, useRuntimeConfig } from '#imports'
 
 export default () => {
   const config = useRuntimeConfig()
@@ -14,9 +14,5 @@ export default () => {
     return translation.messages[key]
   })
 
-  return {
-    locale,
-    locales,
-    messages
-  }
+  return { locale, locales, messages }
 }

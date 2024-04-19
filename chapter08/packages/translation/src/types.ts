@@ -9,10 +9,6 @@ export type LocaleOption = {
   file: string
 }
 
-export type Locale = LocaleOption & {
-  path: string
-}
-
 export type Messages = {
-  [key: string]: Messages
+  [key: string]: string
 }

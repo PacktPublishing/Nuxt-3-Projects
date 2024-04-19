@@ -1,4 +1,4 @@
-import { defineNuxtPlugin } from '#app'
+import { defineNuxtPlugin } from '#imports'
 import useTranslation from '../composables/useTranslation'
 
 export default defineNuxtPlugin(async () => {
