@@ -1,10 +1,11 @@
 import { computed, useCookie, useRuntimeConfig } from '#imports'
+import type { LocaleOption } from '~/src/types'
 
 export default () => {
   const config = useRuntimeConfig()
   const translation = config.public.translation
-  const locale = useCookie('defaultLocale')
-  const locales = translation.locales
+  const locale = useCookie<string>('defaultLocale')
+  const locales: LocaleOption[] = translation.locales ?? []
 
   if (!locale.value) locale.value = translation.defaultLocale
 

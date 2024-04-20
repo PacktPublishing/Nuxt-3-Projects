@@ -3,7 +3,10 @@ import {
   defineNuxtModule,
   addPlugin,
   createResolver,
-  addImportsDir
+  addImportsDir,
+  installModule,
+  hasNuxtModule,
+  addComponentsDir
 } from '@nuxt/kit'
 import type { Messages, ModuleOptions } from './types'
 
@@ -40,7 +43,13 @@ export default defineNuxtModule<ModuleOptions>({
       messages
     }
 
+    if (!hasNuxtModule('@nuxt/ui')) await installModule('@nuxt/ui')
+
     addPlugin(resolver.resolve('./runtime/plugins/translate'))
     addImportsDir(resolver.resolve('runtime/composables'))
+
+    addComponentsDir({
+      path: resolver.resolve('runtime/components')
+    })
   }
 })
