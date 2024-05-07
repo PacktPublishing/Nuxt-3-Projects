@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [],
+import type { Config } from 'tailwindcss'
+
+export default <Partial<Config>>{
   theme: {
     extend: {
       // use Roboto Font
@@ -26,6 +26,5 @@ export default {
         }
       }
     }
-  },
-  plugins: []
+  }
 }
