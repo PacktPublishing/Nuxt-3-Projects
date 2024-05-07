@@ -8,7 +8,7 @@
           Search for current weather data by city
         </p>
 
-        <city-lookup @change="onCityChanged" />
+        <cities-lookup @change="onCityChanged" />
       </u-card>
 
       <transition-group name="fade">
