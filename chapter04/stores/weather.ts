@@ -8,6 +8,7 @@ export const useWeatherStore = defineStore('weather', () => {
   const citiesLookup = async (query: string): Promise<CityData[]> => {
     if (!query) return []
 
+    // using geocoding API
     const response: Array<CityData> = await $fetch(
       `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${apiKey}`
     )
@@ -18,6 +19,7 @@ export const useWeatherStore = defineStore('weather', () => {
     }))
   }
 
+  // using one call API
   const getWeatherData = async () => {
     try {
       weatherData.value = await $fetch(
