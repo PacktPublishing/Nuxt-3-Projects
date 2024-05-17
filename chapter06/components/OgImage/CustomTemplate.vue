@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full w-full flex relative">
+  <div class="h-full w-full flex flex-row relative">
     <div class="flex flex-col justify-between w-2/3 p-16 bg-slate-800">
       <!-- <img src="/logo.png" class="w-32 object-contain" /> -->
 
