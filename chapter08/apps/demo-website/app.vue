@@ -1,5 +1,13 @@
 <template>
-  <div>{{ $t('welcome') }}</div>
+  <UContainer>
+    <div>{{ $t('welcome') }}</div>
 
-  <LanguageSelector />
+    <LanguageSelector />
+  </UContainer>
 </template>
+
+<style>
+body {
+  overflow-x: hidden;
+}
+</style>
